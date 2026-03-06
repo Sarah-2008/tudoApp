@@ -1,6 +1,7 @@
 import useTheme from "@/hooks/useTheme";
 import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from 'expo-router';
+import AntDesign from '@expo/vector-icons/AntDesign';
 
 const TabsLayout = () => {
     const { colors } = useTheme()
@@ -27,6 +28,12 @@ const TabsLayout = () => {
                     <Ionicons name='settings' color={color} size={size}/>
                   ) 
             }} />
+            <Tabs.Screen name='user' options={
+                { title: "user",
+                  tabBarIcon : ({color, size}) => (
+                    <AntDesign name="smile" size={size} color={color} />
+                  )  
+             }}  />     
         </Tabs>
     )
 }

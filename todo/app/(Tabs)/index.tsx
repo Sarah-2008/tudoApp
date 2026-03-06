@@ -11,6 +11,9 @@ export default function Index() {
       <SafeAreaView style={homeStyles.safeArea}>
         <Text >HOME</Text>
         <TouchableOpacity onPress={toggleDarkMode}>MUDA TEMA</TouchableOpacity>
-    </SafeAreaView>
+      </SafeAreaView>
+      
   )
+
+  
 }
