@@ -6,14 +6,14 @@ export default function user() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
+
         {/* ICONE */}
         <View> 
          <Ionicons style={styles.container} name='person' size={100} color={"#000000"}/>
         </View>
 
         {/* Texto */}
-      <Text style={styles.Text}>Usuário
-      </Text>
+      <Text style={styles.Text}>Usuário</Text>
       </View>
     </View>
   );
