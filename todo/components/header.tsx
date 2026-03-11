@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import useTheme from '@/hooks/useTheme'
-import { createHomeStyles } from '@/assets/images/styles/home.styles';
+import { createHomeStyles } from '@/assets/styles/home.styles';
 import { api } from '@/convex/_generated/api';
 import { useQuery } from 'convex/react';
 import { Ionicons } from '@expo/vector-icons';
