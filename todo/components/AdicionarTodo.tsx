@@ -36,7 +36,7 @@ const AdicionarTodo = () => {
           </LinearGradient>
         </TouchableOpacity>
       </View>
-      <Image style={homeStyles.img} source={{uri: "https://images.vexels.com/media/users/3/135933/isolated/preview/19ac9c9b9ff7376fc86b45fee366a1a2-icone-de-lista-de-verificacao-de-arquivo.png" }} />
+      {/* <Image style={homeStyles.img} source={{uri: "https://images.vexels.com/media/users/3/135933/isolated/preview/19ac9c9b9ff7376fc86b45fee366a1a2-icone-de-lista-de-verificacao-de-arquivo.png" }} /> */}
     </View>
   )
 }

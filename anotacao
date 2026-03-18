@@ -1,2 +1,3 @@
 baixar npm - "npm install" (erro expo)
 baixar o convex - "npm i convex" e "npx convex dev"
+instalar o gradiente "npx expo install expo-linear-gradient"

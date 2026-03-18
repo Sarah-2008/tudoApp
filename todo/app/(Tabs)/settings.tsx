@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
 import React from 'react'
+import useTheme from '@/hooks/useTheme'
+import { createHomeStyles } from '@/assets/styles/home.styles';
 
 const settings = () => {
+  const { toggleDarkMode, colors } = useTheme();
+  const homeStyles = createHomeStyles(colors)
+
   return (
     <View>
-      <Text>Settings</Text>
+      <TouchableOpacity onPress={toggleDarkMode} style={homeStyles.title}>MUDA TEMA</TouchableOpacity>
     </View>
   )
 }
