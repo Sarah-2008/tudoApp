@@ -1,4 +1,4 @@
-import { v } from "convex/values";
+import { ConvexError, v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
 // coletar todos os "to dos"
@@ -33,4 +33,20 @@ export const clearAllTodos = mutation({
 
         return { deletedCount: todos.length };
     },
+})
+
+// mudar status do todo
+export const toggleTodo = mutation ({
+    // identificar qual o to do que vai ser alterado 
+    args : {id : v.id("todos")},
+    handler : async (ctx , args) => {
+        // esperar para ver se tem
+        const todo = await ctx.db.get(args.id);
+
+        if (!todo) throw new ConvexError("Todo não foi encontrado!")
+        
+        await ctx.db.patch(args.id, {
+            isCompleted : !todo.isCompleted, 
+        })
+    }
 })
